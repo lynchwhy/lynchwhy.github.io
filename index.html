@@ -1,2 +1,45 @@
-Hello World
-<a href="courses.html">Courses Page</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo Lynch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jo Lynch</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="loadContent('home.html')">Home</a>
+        <a href="#" onclick="loadContent('about.html')">About</a>
+        <a href="#" onclick="loadContent('courses.html')">Courses</a>
+        <a href="#" onclick="loadContent('resume.html')">Resumé</a>
+        <a href="#" onclick="loadContent('contact.html')">Contact</a>
+    </nav>
+    <div class="container">
+        <div id="content-container">
+            <h1>Welcome to my website</h1>
+            <p>Click on the links above to navigate.</p>
+        </div>
+    </div>
+    <script>
+        function loadContent(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content-container').innerHTML = data;
+                    // Reinitialize the see-more buttons after loading new content
+                    const seeMoreButtons = document.querySelectorAll('.see-more');
+                    seeMoreButtons.forEach(button => {
+                        button.addEventListener('click', function() {
+                            const collapsible = this.previousElementSibling;
+                            collapsible.classList.toggle('expanded');
+                            this.textContent = collapsible.classList.contains('expanded') ? 'See Less' : 'See More';
+                        });
+                    });
+                });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+
+    <h2>My Resume</h2>
+
+    <p>Below is a summary of my work experience. Click on 'See More' to view more details about each role.</p>
+    <p>Click here to download a PDF version</p>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Software Engineer</h3>
+                <p>NUBots | Oct 2024 – Present</p>
+                <ul class="collapsible">
+                    <li>Collected and logged precise sample data for analytics, ensuring high accuracy.</li>
+                    <li>Continual troubleshooting and optimisation of processes for efficient data workflows.</li>
+                    <li>Collaborated in an Agile team to meet project deadlines and quality benchmarks.</li>
+                </ul>
+                <button class="see-more">See More</button>
+            </div>
+        </div>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Lab & Data Tech</h3>
+                <p>Hone Carbon | April 2022 – July 2022</p>
+                <ul class="collapsible">
+                    <li>Collected and logged precise sample data for analytics, ensuring high accuracy.</li>
+                    <li>Continual troubleshooting and optimisation of processes for efficient data workflows.</li>
+                    <li>Collaborated in an Agile team to meet project deadlines and quality benchmarks.</li>
+                </ul>
+                <button class="see-more">See More</button>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Co-Founder</h3>
+                <p>Good Growers | Dec 2019 – Present</p>
+                <ul class="collapsible">
+                    <li>Developed and executed a strong business plan including process, financials and strategy for successful launch in the market.</li>
+                    <li>Manage all operations from customer enquiries to crop planning, harvest and delivery - wearing many hats and balancing competing interests.</li>
+                    <li>Managed and nurtured customer relationships via social media and conventional mediums.</li>
+                    <li>Manage accounts, financials and bookkeeping with precision and attention to detail to accurately track and forecast business performance.</li>
+                    <li>Created and systemised processes across the entire business and simplified procedures so they are easily taught to staff.</li>
+                    <li>Coordinate workers to complete tasks on time and to a high standard.</li>
+                    <li>Carry out soil and plant testing, to highlight areas of potential improvement.</li>
+                    <li>Responsible for compliance with regulations affecting all aspects of the business including adherence to Organic certification, local council requirements, food safety rules, and employer obligations.</li>
+                </ul>
+                <button class="see-more">See More</button>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Assistant Farm Manager & Technical Officer</h3>
+                <p>Kooloombakh | June 2016 – Sept 2019</p>
+                <ul class="collapsible">
+                    <li>Researched and implemented software solutions to enhance operational efficiency.</li>
+                    <li>Oversaw daily operations, coordinating staff and resources to meet production targets.</li>
+                    <li>Developed and implemented processes to improve resource allocation and time management.</li>
+                </ul>
+                <button class="see-more">See More</button>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Assistant Retail Manager</h3>
+                <p>Macpac | Aug 2014 – June 2016</p>
+                <ul class="collapsible">
+                    <li>Managed and motivated a team of 10 staff to consistently exceed sales targets.</li>
+                    <li>Delivered in-depth staff training and created customer-centric experiences, boosting satisfaction and revenue.</li>
+                </ul>
+                <button class="see-more">See More</button>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>IT Service Technician</h3>
+                <p>Geekmobile | Jan 2014 – Aug 2014</p>
+                <ul class="collapsible">
+                    <li>Delivered on-site technical support and troubleshooting for a diverse customer base.</li>
+                    <li>Provided training and advice to customers on adopting and utilizing new technology effectively.</li>
+                </ul>
+                <button class="see-more">See More</button>
+            </div>
+        </div>
+        <div>
+            <p>[went backpacking in South America, North America & Europe]</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Assistant Retail Manager & Business Account Expert</h3>
+                <p>‘yes’ Optus | Nov 2009 – May 2013</p>
+                <ul class="collapsible">
+                    <li>Streamlined back-office systems to enhance efficiency and staff availability on the sales floor.</li>
+                    <li>Managed business-to-business trade, providing tailored account management and driving client retention.</li>
+                </ul>
+                <button class="see-more">See More</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const seeMoreButtons = document.querySelectorAll('.see-more');
+
+            seeMoreButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const collapsible = this.previousElementSibling;
+                    collapsible.classList.toggle('expanded');
+                    this.textContent = collapsible.classList.contains('expanded') ? 'See Less' : 'See More';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
